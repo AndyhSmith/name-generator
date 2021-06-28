@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+
+
+    <!-- <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+	<meta name="description" content="MenuSmith suggests meals based on what is in your pantry.">
+	<meta name="keywords" content="food, pantry, manager, cookbook">
+    <meta name="author" content="Andy Smith">
+    <link rel=“canonical” href=“https://andyhsmith.com/” /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+
+    <title>Name Generator</title>
+    <script src="https://kit.fontawesome.com/68a99d09f4.js" crossorigin="anonymous"></script>
+    <link type="text/css" rel="stylesheet" href="index.css?2"></link>
+    <script src="//cdn.jsdelivr.net/npm/faunadb@latest/dist/faunadb-min.js"></script>
+
+
+</head>
+<body onload="init()">
+    <div id="loading">
+        <span style="font-size: 25px;">Loading...</span><br>
+    </div>
+
+    
+    <div class="flex-container">
+        <div>
+            <div id="navigation-container">
+                <div id="view-page-1" class="view-page-button" onclick="viewPage1()"><div class="vertically-allign-text"><i class="fas fa-folder-open"></i></div></div>
+                <div id="view-page-2" class="view-page-button" onclick="viewPage2()"><i class="fas fa-heart"></i></div>
+                <div id="top-bar-background" style="position:absolute; height:47px; width:100%;background-color:#444;z-index:-1;"></div>
+            </div>
+        </div>
+        
+
+        <!-- PAGE 1 -->
+        <div id="page-1" style="display:none;">
+            <h2>Generated Names</h2>    
+            
+            Names Start With: <input id="nameStart"></input><br><br>
+            <button onclick="generateNames()">Generate New Names</button>  <br>
+            <div id="message"></div>
+            <hr>
+            <div id="names">
+            </div>
+        </div>
+
+        <!-- PAGE 2 -->
+        <div id="page-2" style="display:none;">
+            <h2>Favorite Names</h2>
+            <div id="favorite-names">
+            </div>
+        </div>
+        <br>
+        <hr>
+        <div style='font-size: 14px;'><i>I hope this will be useful to anyone trying to create unique character names.</i> </div><br>
+
+        <div style='font-size: 14px;'><i>Here are a few of my favorite generated names:</i> </div><br>
+        <div id="my-favorites"></div>
+
+
+        <div style='font-size: 14px;'><i>What is going on? I wrote a program that generated some statistics from a list of about 18,000 names. I then used those statistics to procedurally generate new names based on a few simple discovered patterns.</i> </div>
+
+        <p id="footer" style="width: 100%;text-align:center;font-size: 10px;"><i>&copy; 2021, Andy Smith. All Rights Reserved | v. Alpha 0.1</i></p>
+    </div>
+
+    
+    <script src="./index.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,99 @@
+/* ############################################# */
+/* L O A D I N G   S C R E E N */
+/* ############################################# */
+
+#loading {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: steelblue;
+    z-index: 4;
+    top: 0px;
+    left: 0px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ############################################# */
+/* N A V I G A T I O N   B A R */
+/* ############################################# */
+
+#navigation-container {
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.view-page-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-grow: 1;
+    color: #444;
+    height: 35px;
+    font-size: 20px;
+    border: 0px solid rgba(0,0,0,0);
+    border-bottom: 5px solid rgba(0,0,0,0);
+    border-top: 5px solid rgba(0,0,0,0);
+}
+
+.view-page-button:hover {
+    opacity: .8;
+    transition: all .3s ease;
+    color: white !important;
+}
+
+
+/* ############################################# */
+/* M A I N   T A G S */
+/* ############################################# */
+
+body {
+    max-height: 100%;
+    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    max-width: 800px;
+    font-family: Helvetica, sans-serif;
+
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+
+.section {
+    color: black;
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.section:hover {
+    color: #888
+}
+
+button {
+    border: none;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: white;;
+    text-transform: uppercase;
+    color: steelblue;
+}
+
+button:hover {
+    font-weight: bold;
+}
